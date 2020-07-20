@@ -1,0 +1,2 @@
+grpclib==0.3.2
+grpcio-tools==1.30.0
