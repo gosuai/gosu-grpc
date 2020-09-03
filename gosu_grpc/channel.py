@@ -9,7 +9,8 @@ from google.auth.transport.aio.aiohttp import Request
 from google.oauth2.aio.service_account import Credentials
 from grpclib.client import Channel
 
-@lru_cache()
+
+@lru_cache
 def get_credentials():
     return Credentials.from_service_account_file(
         os.getenv('GOOGLE_APPLICATION_CREDENTIALS'),
