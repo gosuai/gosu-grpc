@@ -5,9 +5,10 @@ from functools import lru_cache
 from types import MappingProxyType
 
 import aiohttp
-from google.auth.transport.aio.aiohttp import Request
-from google.oauth2.aio.service_account import Credentials
+from google.auth.transport.aiohttp_requests import Request
+from google.oauth2.service_account_async import Credentials
 from grpclib.client import Channel
+
 
 @lru_cache()
 def get_credentials():
