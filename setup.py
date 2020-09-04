@@ -24,7 +24,7 @@ setuptools.setup(
     install_requires=[
         'aiohttp>=3.6.2',
         'google-api-core>=1.21.0',
-        'google-auth@git+git://github.com/googleapis/google-auth-library-python@async#egg=google-auth',
+        'google-auth@git+git://github.com/gosuai/google-auth-library-python@async#egg=google-auth',
         'google-auth-httplib2>=0.0.3',
         'google-auth-oauthlib>=0.4.1',
         'grpclib>=0.3.2',
