@@ -33,8 +33,10 @@ async def get_or_create_channel(host):
         channel = Channel(host, 443, ssl=True)
         credentials = get_credentials()
         channel.project_id = credentials.project_id
-        async with aiohttp.ClientSession() as sess:
-            await credentials.refresh(Request(sess))
+        async with aiohttp.ClientSession(auto_decompress=False) as sess:
+            req = Request()
+            req.session = sess  # TODO (s): Remove this kostyl after library fix
+            await credentials.refresh(req)
             channel.metadata = dict(authorization=f'Bearer {credentials.token}')
         new_channels = {host: channel}
         new_channels.update(channels)

@@ -14,7 +14,7 @@ setuptools.setup(
     name='google-gosu',
     packages=packages,
     namespace_packages=namespaces,
-    version='0.3.0',
+    version='0.3.1',
     license='MIT',
     description='Library to work with google libs',
     author='Gosu developers',
